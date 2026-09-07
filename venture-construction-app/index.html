@@ -1,0 +1,640 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
+  <title>Sri Sai Balaji Ventures</title>
+  <link rel="icon" type="image/png" href="logo.png">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tenali+Ramakrishna&family=Ramabhadra&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+
+</head>
+<body class="light-theme">
+  <!-- App Root -->
+  <div class="app-root" id="ventureAppRoot">
+
+    <!-- Liquid Glass Top Navigation Bar -->
+    <header class="app-header" id="appHeader">
+      <div class="header-left">
+        <a href="#" class="brand-link" id="logoBtn" aria-label="Sri Sai Balaji Ventures Home">
+          <img src="logo.png" alt="Sri Sai Balaji Ventures Logo" class="brand-logo-img">
+          <span class="brand-name">Sri Sai Balaji Ventures</span>
+        </a>
+      </div>
+      <nav class="header-nav" id="headerNav">
+        <a href="#" class="nav-link active" data-section="home">Home</a>
+        <a href="#projectsSection" class="nav-link" data-section="projects">Projects</a>
+        <a href="tel:8125900999" class="nav-link nav-link--contact">
+          <svg viewBox="0 0 24 24" class="nav-icon"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
+          Contact Us
+        </a>
+      </nav>
+      <!-- Mobile Quick Contact Button (Visible on mobile only) -->
+      <a href="tel:8125900999" class="header-mobile-call-btn" aria-label="Call Sri Sai Balaji Ventures">
+        <svg viewBox="0 0 24 24" class="mobile-call-icon"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
+        <span>Contact</span>
+      </a>
+    </header>
+
+    <!-- Main Content Shell -->
+    <div class="page-shell">
+
+      <!-- VIEW 1: HOME FEED VIEW -->
+      <main class="home-view" id="homeView">
+        
+        <!-- Full-Screen Immersive Hero Section -->
+        <section class="hero-screen" id="heroSection">
+          <!-- Background Video -->
+          <div class="hero-bg-video">
+            <iframe 
+              src="https://www.youtube.com/embed/zJrfClJY7BY?autoplay=1&mute=1&loop=1&playlist=zJrfClJY7BY&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" 
+              frameborder="0" 
+              allow="autoplay; encrypted-media" 
+              allowfullscreen>
+            </iframe>
+          </div>
+
+          <div class="hero-inner-content">
+            <h1 class="hero-brand-title">
+              <span class="hero-title-main">Sri Sai Balaji</span>
+              <span class="hero-title-sub">VENTURES &amp; CONSTRUCTION</span>
+            </h1>
+
+            <div class="hero-accent-divider">
+              <span class="divider-line"></span>
+              <span class="divider-diamond">&#9670;</span>
+              <span class="divider-line"></span>
+            </div>
+
+            <div class="hero-cta-group">
+              <a href="tel:8125900999" class="hero-btn hero-btn--primary">
+                <svg viewBox="0 0 24 24" class="btn-icon"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
+                <span>8125 900 999</span>
+              </a>
+              <a href="#projectsSection" class="hero-btn hero-btn--secondary" id="exploreProjectsBtn">
+                <span>View Projects</span>
+                <svg viewBox="0 0 24 24" class="btn-icon-arrow"><path d="M7.41 8.59L12 13.17l4.59-4.58L18 10l-6 6-6-6 1.41-1.41z" fill="currentColor"/></svg>
+              </a>
+            </div>
+          </div>
+
+          <!-- Animated Scroll Indicator -->
+          <a href="#projectsSection" class="hero-scroll-indicator" id="scrollIndicatorBtn" aria-label="Scroll to projects">
+            <span class="scroll-mouse">
+              <span class="scroll-wheel"></span>
+            </span>
+          </a>
+        </section>
+
+        <!-- Main Feed Content Shell -->
+        <div class="home-feed-shell" id="projectsSection">
+          <section class="video-feed-section">
+            <div class="feed-section-header">
+              <div class="feed-header-left">
+                <span class="feed-section-badge">PORTFOLIO</span>
+                <h2 class="feed-heading">Featured Ventures &amp; Updates</h2>
+                <p class="feed-subheading">Project walkthroughs, open plots, and construction milestones</p>
+              </div>
+            </div>
+
+            <!-- Image Slider Grid -->
+            <div class="image-slider-wrapper">
+              <div class="image-slider-container" id="imageSliderGrid">
+
+                <!-- Slide 1 -->
+                <article class="slider-card">
+                  <div class="slider-media-box">
+                    <img src="https://yt3.ggpht.com/YF0QErlcdMdH9w_ALRJoR_uRDoJFVvdmT8Orr_loMf4khQBb7B0-3KUDiNKWmJHsHrfzLgSdJhB2WQ=s1024" alt="Project Image" class="slider-img" referrerpolicy="no-referrer">
+                  </div>
+                  <div class="slider-actions">
+                    <a href="tel:8125900999" class="slider-contact-btn">
+                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
+                      Contact Us
+                    </a>
+                  </div>
+                </article>
+
+                <!-- Slide 2 -->
+                <article class="slider-card">
+                  <div class="slider-media-box">
+                    <img src="https://yt3.ggpht.com/kMFvBLxdQtaojBw7P03UFvjjvdBHYeGR8ZMuw7HBzUHo4YwH6M5Dj6bK-oeO8wCoSm-Xf4e7G0Rd=s1024" alt="Project Image 2" class="slider-img" referrerpolicy="no-referrer">
+                  </div>
+                  <div class="slider-actions">
+                    <a href="tel:8125900999" class="slider-contact-btn">
+                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
+                      Contact Us
+                    </a>
+                  </div>
+                </article>
+
+                <!-- Slide 3 -->
+                <article class="slider-card">
+                  <div class="slider-media-box">
+                    <img src="https://yt3.ggpht.com/VQsQ9RLsGUyROqVmtOst3b_MbeHIyHGJNEhGIq-TOSYFRqBOvRfLnEGCpa5_qJvMUBwZILdPdgPvSw=s1024" alt="Project Image 3" class="slider-img" referrerpolicy="no-referrer">
+                  </div>
+                  <div class="slider-actions">
+                    <a href="tel:8125900999" class="slider-contact-btn">
+                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
+                      Contact Us
+                    </a>
+                  </div>
+                </article>
+
+                <!-- Slide 4 -->
+                <article class="slider-card">
+                  <div class="slider-media-box">
+                    <img src="https://yt3.ggpht.com/MQV1rc6PV6AbuPFp9mVL-dGSQRu__EhmmEwZCF7heuin_lAoYbmQ_q3heBJ33GAVa8xhDSNudxJS1A=s1024" alt="Project Image 4" class="slider-img" referrerpolicy="no-referrer">
+                  </div>
+                  <div class="slider-actions">
+                    <a href="tel:8125900999" class="slider-contact-btn">
+                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
+                      Contact Us
+                    </a>
+                  </div>
+                </article>
+
+                <!-- Slide 5 -->
+                <article class="slider-card">
+                  <div class="slider-media-box">
+                    <img src="https://yt3.ggpht.com/u9tb_zsEa22LNNF8oWS4hQ0XdrT2VBonwwt_ZluzRCvPIoaHCkvPPBk3YBt6VjSdRRQ4V6J2XLumZqc=s1024" alt="Project Image 5" class="slider-img" referrerpolicy="no-referrer">
+                  </div>
+                  <div class="slider-actions">
+                    <a href="tel:8125900999" class="slider-contact-btn">
+                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
+                      Contact Us
+                    </a>
+                  </div>
+                </article>
+
+                <!-- Slide 6 -->
+                <article class="slider-card">
+                  <div class="slider-media-box">
+                    <img src="https://yt3.ggpht.com/9bln6okWEDrW8D7SgywnjpugoaLPhJKYGZcK54LGrMN5YBQxAMXtWBECcyk8gk-zPeZa48PM6pfyXBI=s1024" alt="Project Image 6" class="slider-img" referrerpolicy="no-referrer">
+                  </div>
+                  <div class="slider-actions">
+                    <a href="tel:8125900999" class="slider-contact-btn">
+                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
+                      Contact Us
+                    </a>
+                  </div>
+                </article>
+
+                <!-- Slide 7 -->
+                <article class="slider-card">
+                  <div class="slider-media-box">
+                    <img src="https://yt3.ggpht.com/-CzT0nOoioOtvTqMfFdA3wHaWnf2P-YKQfKYdMQwjOsJDI8XvMXxm4FRG_UFLR6WIrO6FkoESrB4wA=s1024" alt="Project Image 7" class="slider-img" referrerpolicy="no-referrer">
+                  </div>
+                  <div class="slider-actions">
+                    <a href="tel:8125900999" class="slider-contact-btn">
+                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
+                      Contact Us
+                    </a>
+                  </div>
+                </article>
+
+                <!-- Slide 8 -->
+                <article class="slider-card">
+                  <div class="slider-media-box">
+                    <img src="https://yt3.ggpht.com/5MmtNcGffg8h81kNAhG_D_gqE_iuGXoR0s5vW-BxmTBPsgp__0dKgWwud9hdRfy3jBjjkVhiJEv0Ymc=s1024" alt="Project Image 8" class="slider-img" referrerpolicy="no-referrer">
+                  </div>
+                  <div class="slider-actions">
+                    <a href="tel:8125900999" class="slider-contact-btn">
+                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
+                      Contact Us
+                    </a>
+                  </div>
+                </article>
+
+                <!-- Slide 9 -->
+                <article class="slider-card">
+                  <div class="slider-media-box">
+                    <img src="https://yt3.ggpht.com/TYmRXlAUMoUunixKOQG8nksao0N2fjd38zmg1M0xHK58N2kRmSei8meIg3h2eEKU8hjBpANdGIeTlw=s1024" alt="Project Image 9" class="slider-img" referrerpolicy="no-referrer">
+                  </div>
+                  <div class="slider-actions">
+                    <a href="tel:8125900999" class="slider-contact-btn">
+                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
+                      Contact Us
+                    </a>
+                  </div>
+                </article>
+
+                <!-- Slide 10 -->
+                <article class="slider-card">
+                  <div class="slider-media-box">
+                    <img src="https://yt3.ggpht.com/ks7FFEGugzySXrmLa6siMKZDszMzFBZiRdx4OQWXZftb3TZSRsD2JsZFGx-tN_mQhs4h-SAnBakm=s1024" alt="Project Image 10" class="slider-img" referrerpolicy="no-referrer">
+                  </div>
+                  <div class="slider-actions">
+                    <a href="tel:8125900999" class="slider-contact-btn">
+                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
+                      Contact Us
+                    </a>
+                  </div>
+                </article>
+
+              </div>
+            </div>
+        </section>
+
+        <!-- Projects Section -->
+        <section class="named-projects-section" id="projectsVideoSection">
+          <div class="section-header">
+            <h2 class="section-title">Video Gallery</h2>
+          </div>
+          
+          <div class="projects-video-grid">
+            
+            <!-- Video 1 -->
+            <div class="project-video-card" id="projectVideo1">
+              <div class="video-thumbnail" id="thumb1" style="background-image: url('https://img.youtube.com/vi/fjkCi3CbQCg/hqdefault.jpg');"></div>
+              <div class="video-overlay" id="overlay1"></div>
+              
+              <button class="project-play-btn" id="playBtn1" aria-label="Play Video 1">
+                <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+              </button>
+              
+              <button class="project-stop-btn hidden" id="stopBtn1" aria-label="Stop Video 1">
+                <svg viewBox="0 0 24 24" class="stop-icon"><path d="M6 6h12v12H6z" fill="currentColor"/></svg>
+                Stop
+              </button>
+              
+              <div class="iframe-clipper">
+                <iframe 
+                  id="iframe1"
+                  class="project-video-iframe"
+                  src="" 
+                  frameborder="0" 
+                  allow="autoplay; encrypted-media" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+
+            <!-- Video 2 -->
+            <div class="project-video-card" id="projectVideo2">
+              <div class="video-thumbnail" id="thumb2" style="background-image: url('https://img.youtube.com/vi/cMsJo2xfBqs/hqdefault.jpg');"></div>
+              <div class="video-overlay" id="overlay2"></div>
+              
+              <button class="project-play-btn" id="playBtn2" aria-label="Play Video 2">
+                <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+              </button>
+              
+              <button class="project-stop-btn hidden" id="stopBtn2" aria-label="Stop Video 2">
+                <svg viewBox="0 0 24 24" class="stop-icon"><path d="M6 6h12v12H6z" fill="currentColor"/></svg>
+                Stop
+              </button>
+              
+              <div class="iframe-clipper">
+                <iframe 
+                  id="iframe2"
+                  class="project-video-iframe"
+                  src="" 
+                  frameborder="0" 
+                  allow="autoplay; encrypted-media" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+
+            <!-- Video 3 -->
+            <div class="project-video-card" id="projectVideo3">
+              <div class="video-thumbnail" id="thumb3" style="background-image: url('https://img.youtube.com/vi/jeJvs1U-GP8/hqdefault.jpg');"></div>
+              <div class="video-overlay" id="overlay3"></div>
+              
+              <button class="project-play-btn" id="playBtn3" aria-label="Play Video 3">
+                <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+              </button>
+              
+              <button class="project-stop-btn hidden" id="stopBtn3" aria-label="Stop Video 3">
+                <svg viewBox="0 0 24 24" class="stop-icon"><path d="M6 6h12v12H6z" fill="currentColor"/></svg>
+                Stop
+              </button>
+              
+              <div class="iframe-clipper">
+                <iframe 
+                  id="iframe3"
+                  class="project-video-iframe"
+                  src="" 
+                  frameborder="0" 
+                  allow="autoplay; encrypted-media" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+
+            <!-- Video 4 -->
+            <div class="project-video-card" id="projectVideo4">
+              <div class="video-thumbnail" id="thumb4" style="background-image: url('https://img.youtube.com/vi/Reqfg2yKj64/hqdefault.jpg');"></div>
+              <div class="video-overlay" id="overlay4"></div>
+              
+              <button class="project-play-btn" id="playBtn4" aria-label="Play Video 4">
+                <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+              </button>
+              
+              <button class="project-stop-btn hidden" id="stopBtn4" aria-label="Stop Video 4">
+                <svg viewBox="0 0 24 24" class="stop-icon"><path d="M6 6h12v12H6z" fill="currentColor"/></svg>
+                Stop
+              </button>
+              
+              <div class="iframe-clipper">
+                <iframe 
+                  id="iframe4"
+                  class="project-video-iframe"
+                  src="" 
+                  frameborder="0" 
+                  allow="autoplay; encrypted-media" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+
+            <!-- Video 5 -->
+            <div class="project-video-card" id="projectVideo5">
+              <div class="video-thumbnail" id="thumb5" style="background-image: url('https://img.youtube.com/vi/mkShyVmtehw/hqdefault.jpg');"></div>
+              <div class="video-overlay" id="overlay5"></div>
+              
+              <button class="project-play-btn" id="playBtn5" aria-label="Play Video 5">
+                <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+              </button>
+              
+              <button class="project-stop-btn hidden" id="stopBtn5" aria-label="Stop Video 5">
+                <svg viewBox="0 0 24 24" class="stop-icon"><path d="M6 6h12v12H6z" fill="currentColor"/></svg>
+                Stop
+              </button>
+              
+              <div class="iframe-clipper">
+                <iframe 
+                  id="iframe5"
+                  class="project-video-iframe"
+                  src="" 
+                  frameborder="0" 
+                  allow="autoplay; encrypted-media" 
+                  allowfullscreen>
+                </iframe>
+              </div>
+            </div>
+
+          </div>
+        </section>
+        <!-- Telugu CTA Banner Section -->
+        <section class="telugu-cta-section">
+          <div class="cta-banner-content">
+            <h2 class="telugu-graceful-text">మీ కలలను సాకారం చేసుకోండి</h2>
+            <!-- Contact button opens dial pad using tel: scheme -->
+            <a href="tel:+919876543210" class="cta-dial-btn">
+              <svg viewBox="0 0 24 24" class="phone-icon"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
+              Contact Us
+            </a>
+          </div>
+        </section>
+
+        <!-- Site Footer Label -->
+        <footer class="site-footer">
+          <div class="footer-container">
+            <div class="footer-grid">
+              
+              <div class="footer-brand">
+                <h3 class="footer-brand-title">Sri Sai Balaji Ventures</h3>
+                <p class="footer-brand-desc">Premium construction and architectural services, delivering excellence and aesthetic brilliance.</p>
+              </div>
+
+            </div>
+
+            <div class="footer-bottom">
+              <div class="footer-credits">
+                <span class="footer-text">Developed & Designed by <strong>Teemup.tech</strong></span>
+              </div>
+              <div class="footer-copyright">
+                &copy; 2026 Sri Sai Balaji Ventures & Construction. All rights reserved.
+              </div>
+            </div>
+          </div>
+        </footer>
+        </div>
+      </main>
+
+      <!-- VIEW 2: DEDICATED IMPROVED WATCH PAGE (2-COLUMN THEATER LAYOUT) -->
+      <main class="content-view hidden" id="watchView">
+        <div class="watch-page-wrapper">
+
+          <!-- Top Back Bar -->
+          <div class="watch-top-bar">
+            <button class="back-link-btn" id="backToHomeBtn">
+              <svg viewBox="0 0 24 24" class="icon"><path d="M20 11H7.83l5.59-5.59L12 4l-8 8 8 8 1.41-1.41L7.83 13H20v-2z" fill="currentColor"/></svg>
+              <span>Back to Feed</span>
+            </button>
+          </div>
+
+          <!-- 2-Column Theater Layout -->
+          <div class="watch-columns-layout">
+
+            <!-- LEFT MAIN COLUMN: Video Player + Meta + Description + Comments -->
+            <div class="watch-primary-col">
+
+              <!-- Improved Video Player Screen (Natural Code-Generated Video) -->
+              <div class="player-viewport" id="playerViewport">
+                <canvas id="natureVideoCanvas" width="960" height="540"></canvas>
+
+                <!-- Professional Video Player Controls Bar -->
+                <div class="player-controls-bar" id="playerControlsBar">
+                  <div class="seek-track" id="videoSeekTrack">
+                    <div class="seek-progress" id="videoSeekProgress"></div>
+                  </div>
+                  <div class="controls-actions">
+                    <div class="actions-left">
+                      <button class="ctrl-btn" id="codePlayToggle" aria-label="Play/Pause">
+                        <svg viewBox="0 0 24 24" class="icon" id="playIconSvg"><path d="M6 19h4V5H6v14zm8-14v14h4V5h-4z" fill="#ffffff"/></svg>
+                      </button>
+                      <button class="ctrl-btn" id="codeRestartBtn" aria-label="Replay">
+                        <svg viewBox="0 0 24 24" class="icon"><path d="M12 5V1L7 6l5 5V7c3.31 0 6 2.69 6 6s-2.69 6-6 6-6-2.69-6-6H4c0 4.42 3.58 8 8 8s8-3.58 8-8-3.58-8-8-8z" fill="#ffffff"/></svg>
+                      </button>
+                      <button class="ctrl-btn" id="codeMuteBtn" aria-label="Mute/Unmute">
+                        <svg viewBox="0 0 24 24" class="icon" id="volumeIconSvg"><path d="M3 9v6h4l5 5V4L7 9H3zm13.5 3c0-1.77-1.02-3.29-2.5-4.03v8.05c1.48-.73 2.5-2.25 2.5-4.02z" fill="#ffffff"/></svg>
+                      </button>
+                      <span class="time-label" id="videoTimeDisplay">0:00 / 0:30</span>
+                    </div>
+                    <div class="actions-right">
+                      <button class="ctrl-btn" id="codeFullscreenBtn" aria-label="Fullscreen">
+                        <svg viewBox="0 0 24 24" class="icon"><path d="M7 14H5v5h5v-2H7v-3zm-2-4h2V7h3V5H5v5zm12 7h-3v2h5v-5h-2v3zM14 5v2h3v3h2V5h-5z" fill="#ffffff"/></svg>
+                      </button>
+                    </div>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Title & Channel Header Row -->
+              <div class="video-info-box">
+                <h1 class="watch-video-title" id="watchVideoTitle">Sri Sai Balaji Ventures - Project Introduction & Vision</h1>
+                
+                <div class="watch-channel-row">
+                  <div class="channel-group">
+                    <div class="channel-avatar"><img src="logo.png" alt="Sri Sai Balaji Ventures" class="avatar-logo-img"></div>
+                    <div class="channel-meta">
+                      <div class="channel-title">Sri Sai Balaji Ventures</div>
+                      <div class="channel-sub">245K subscribers</div>
+                    </div>
+                    <button class="subscribe-btn" id="subscribeBtn">Subscribe</button>
+                  </div>
+
+                  <div class="video-action-buttons">
+                    <button class="action-pill-btn" id="likeBtn">
+                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" fill="currentColor"/></svg>
+                      <span id="likeCountText">14K</span>
+                    </button>
+                    <button class="action-pill-btn" id="shareBtn">
+                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M18 16.08c-.76 0-1.44.3-1.96.77L8.91 12.7c.05-.23.09-.46.09-.7s-.04-.47-.09-.7l7.05-4.11c.54.5 1.25.81 2.04.81 1.66 0 3-1.34 3-3s-1.34-3-3-3-3 1.34-3 3c0 .24.04.47.09.7L8.04 9.81C7.5 9.31 6.79 9 6 9c-1.66 0-3 1.34-3 3s1.34 3 3 3c.79 0 1.5-.31 2.04-.81l7.12 4.16c-.05.21-.08.43-.08.65 0 1.61 1.31 2.92 2.92 2.92s2.92-1.31 2.92-2.92c0-1.61-1.31-2.92-2.92-2.92z" fill="currentColor"/></svg>
+                      <span>Share</span>
+                    </button>
+                  </div>
+                </div>
+
+                <!-- Description Card -->
+                <div class="video-description-card">
+                  <div class="views-date-row" id="watchVideoStats">180K views • 2 days ago</div>
+                  <p class="description-text" id="watchVideoDesc">
+                    Welcome to Sri Sai Balaji Ventures. This video is generated live by code on HTML5 canvas with natural color harmonies, smooth frame pacing, and responsive motion graphics.
+                  </p>
+                </div>
+              </div>
+
+              <!-- COMMENTS SECTION -->
+              <section class="comments-section" id="commentsSection">
+                <div class="comments-header">
+                  <h2 class="comments-count" id="commentsCountHeader">3 Comments</h2>
+                </div>
+
+                <!-- Add Comment Form -->
+                <div class="add-comment-box">
+                  <div class="user-avatar-sm"><img src="logo.png" alt="User" class="avatar-logo-img"></div>
+                  <div class="add-comment-field">
+                    <input type="text" id="newCommentInput" placeholder="Add a comment..." autocomplete="off">
+                    <div class="comment-actions-row hidden" id="commentActionsRow">
+                      <button class="comment-cancel-btn" id="cancelCommentBtn">Cancel</button>
+                      <button class="comment-submit-btn" id="submitCommentBtn">Comment</button>
+                    </div>
+                  </div>
+                </div>
+
+                <!-- Comments List -->
+                <div class="comments-list" id="commentsList">
+                  <!-- Comment 1 -->
+                  <div class="comment-item">
+                    <div class="comment-avatar">AV</div>
+                    <div class="comment-body">
+                      <div class="comment-author-row">
+                        <span class="comment-author">Arjun Verma</span>
+                        <span class="comment-time">1 day ago</span>
+                      </div>
+                      <div class="comment-content">
+                        The natural lighting and smooth motion on this video are fantastic. Sri Sai Balaji Ventures has built an incredible video platform here!
+                      </div>
+                      <div class="comment-actions">
+                        <button class="comment-like-btn" data-liked="false">
+                          <svg viewBox="0 0 24 24" class="icon-xs"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" fill="currentColor"/></svg>
+                          <span class="like-num">42</span>
+                        </button>
+                        <button class="reply-text-btn">Reply</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Comment 2 -->
+                  <div class="comment-item">
+                    <div class="comment-avatar">PR</div>
+                    <div class="comment-body">
+                      <div class="comment-author-row">
+                        <span class="comment-author">Priya Rao</span>
+                        <span class="comment-time">2 days ago</span>
+                      </div>
+                      <div class="comment-content">
+                        Love how clean the video player is. The timeline scrubbing feels so responsive, and no lag whatsoever.
+                      </div>
+                      <div class="comment-actions">
+                        <button class="comment-like-btn" data-liked="false">
+                          <svg viewBox="0 0 24 24" class="icon-xs"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" fill="currentColor"/></svg>
+                          <span class="like-num">19</span>
+                        </button>
+                        <button class="reply-text-btn">Reply</button>
+                      </div>
+                    </div>
+                  </div>
+
+                  <!-- Comment 3 -->
+                  <div class="comment-item">
+                    <div class="comment-avatar">RK</div>
+                    <div class="comment-body">
+                      <div class="comment-author-row">
+                        <span class="comment-author">Rohan Kumar</span>
+                        <span class="comment-time">3 days ago</span>
+                      </div>
+                      <div class="comment-content">
+                        Great work by Sri Sai Balaji Ventures! Solid presentation and the layout is easy to navigate on both mobile and laptop.
+                      </div>
+                      <div class="comment-actions">
+                        <button class="comment-like-btn" data-liked="false">
+                          <svg viewBox="0 0 24 24" class="icon-xs"><path d="M1 21h4V9H1v12zm22-11c0-1.1-.9-2-2-2h-6.31l.95-4.57.03-.32c0-.41-.17-.79-.44-1.06L14.17 1 7.59 7.59C7.22 7.95 7 8.45 7 9v10c0 1.1.9 2 2 2h9c.83 0 1.54-.5 1.84-1.22l3.02-7.05c.09-.23.14-.47.14-.73v-2z" fill="currentColor"/></svg>
+                          <span class="like-num">8</span>
+                        </button>
+                        <button class="reply-text-btn">Reply</button>
+                      </div>
+                    </div>
+                  </div>
+                </div>
+              </section>
+
+            </div>
+
+            <!-- RIGHT SIDEBAR COLUMN: Recommended Videos List -->
+            <aside class="watch-secondary-col">
+              <h2 class="sidebar-heading">More from Sri Sai Balaji Ventures</h2>
+              <div class="recommended-videos-list" id="recommendedVideosList"></div>
+            </aside>
+
+          </div>
+
+          <!-- Site Footer Label -->
+          <footer class="site-footer">
+            <div class="footer-container">
+              <div class="footer-credits">
+                <span class="footer-text">Made by <strong>Teemup Technology</strong></span>
+                <span class="footer-bullet">•</span>
+                <span class="footer-demo-pill">Demo Version</span>
+              </div>
+              <div class="footer-info">
+                <span>Sri Sai Balaji Ventures Platform</span>
+              </div>
+            </div>
+          </footer>
+        </div>
+      </main>
+
+    </div>
+
+    <!-- Image Lightbox Modal -->
+    <div class="lightbox-modal hidden" id="imageLightbox">
+      <button class="lightbox-close-btn" id="lightboxCloseBtn" aria-label="Close fullscreen image">
+        <svg viewBox="0 0 24 24" class="icon"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/></svg>
+      </button>
+      
+      <div class="lightbox-content">
+        <img src="" alt="Fullscreen Project" class="lightbox-img" id="lightboxImg">
+        <div class="lightbox-actions">
+          <a href="tel:8125900999" class="lightbox-contact-btn">
+            <svg viewBox="0 0 24 24" class="icon-sm"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
+            Contact Us Now
+          </a>
+        </div>
+      </div>
+    </div>
+
+    <!-- Toast Notice -->
+    <div class="toast-popup hidden" id="toastPopup">
+      <span id="toastText">Action completed</span>
+    </div>
+
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
