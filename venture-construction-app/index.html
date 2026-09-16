@@ -23,20 +23,130 @@
           <span class="brand-name">Sri Sai Balaji Ventures</span>
         </a>
       </div>
-      <nav class="header-nav" id="headerNav">
-        <a href="#" class="nav-link active" data-section="home">Home</a>
-        <a href="#projectsSection" class="nav-link" data-section="projects">Projects</a>
-        <a href="tel:8125900999" class="nav-link nav-link--contact">
-          <svg viewBox="0 0 24 24" class="nav-icon"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
-          Contact Us
+      <div class="header-right-group">
+        <nav class="header-nav" id="headerNav">
+          <a href="#" class="nav-link active" data-section="home">Home</a>
+          <a href="#aboutSection" class="nav-link" data-section="about">About</a>
+          <a href="#servicesSection" class="nav-link" data-section="services">Services</a>
+          <a href="#projectsSection" class="nav-link" data-section="projects">Projects</a>
+          <a href="tel:8125900999" class="nav-link nav-link--contact">
+            <svg viewBox="0 0 24 24" class="nav-icon"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
+            Contact Us
+          </a>
+        </nav>
+        <!-- Mobile Quick Contact Button (Visible on mobile only) -->
+        <a href="tel:8125900999" class="header-mobile-call-btn" aria-label="Call Sri Sai Balaji Ventures">
+          <svg viewBox="0 0 24 24" class="mobile-call-icon"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
+          <span>Contact</span>
         </a>
-      </nav>
-      <!-- Mobile Quick Contact Button (Visible on mobile only) -->
-      <a href="tel:8125900999" class="header-mobile-call-btn" aria-label="Call Sri Sai Balaji Ventures">
-        <svg viewBox="0 0 24 24" class="mobile-call-icon"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
-        <span>Contact</span>
-      </a>
+        <!-- 3-Line Premium Hamburger Button -->
+        <button class="hamburger-menu-btn" id="hamburgerMenuBtn" aria-label="Toggle navigation menu" aria-expanded="false" aria-controls="luxuryNavDrawer">
+          <span class="hamburger-box" aria-hidden="true">
+            <span class="hamburger-line line-1"></span>
+            <span class="hamburger-line line-2"></span>
+            <span class="hamburger-line line-3"></span>
+          </span>
+        </button>
+      </div>
     </header>
+
+    <!-- Navigation Overlay Backdrop -->
+    <div class="drawer-backdrop" id="drawerBackdrop" aria-hidden="true"></div>
+
+    <!-- Premium Full-Screen / Side-Sheet Navigation Overlay -->
+    <aside class="luxury-nav-drawer" id="luxuryNavDrawer" role="dialog" aria-modal="true" aria-label="Main Navigation Menu" inert>
+      <div class="drawer-panel">
+        
+        <!-- Drawer Header -->
+        <div class="drawer-header">
+          <div class="drawer-brand">
+            <img src="logo.png" alt="Sri Sai Balaji Ventures Logo" class="drawer-logo-img">
+            <div class="drawer-brand-text">
+              <span class="drawer-brand-name">Sri Sai Balaji Ventures</span>
+              <span class="drawer-brand-tagline">Ventures &amp; Construction</span>
+            </div>
+          </div>
+          <button class="drawer-close-btn" id="drawerCloseBtn" aria-label="Close navigation menu">
+            <svg viewBox="0 0 24 24" class="close-icon"><path d="M19 6.41L17.59 5 12 10.59 6.41 5 5 6.41 10.59 12 5 17.59 6.41 19 12 13.41 17.59 19 19 17.59 13.41 12z" fill="currentColor"/></svg>
+          </button>
+        </div>
+
+        <!-- Architectural Blueprint Accent Divider -->
+        <div class="drawer-blueprint-divider">
+          <span class="bp-line"></span>
+          <span class="bp-tag">ARCHITECTURE • VENTURES</span>
+          <span class="bp-line"></span>
+        </div>
+
+        <!-- Staggered Navigation Items -->
+        <nav class="drawer-nav" id="drawerNavList">
+          <a href="#heroSection" class="drawer-nav-item active" data-section="home" style="--item-index: 1;">
+            <span class="item-number">01</span>
+            <div class="item-text-group">
+              <span class="item-label">Home</span>
+              <span class="item-desc">Welcome &amp; Overview</span>
+            </div>
+            <svg viewBox="0 0 24 24" class="item-arrow"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" fill="currentColor"/></svg>
+          </a>
+          <a href="#aboutSection" class="drawer-nav-item" data-section="about" style="--item-index: 2;">
+            <span class="item-number">02</span>
+            <div class="item-text-group">
+              <span class="item-label">About Us</span>
+              <span class="item-desc">Our Legacy &amp; Trust</span>
+            </div>
+            <svg viewBox="0 0 24 24" class="item-arrow"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" fill="currentColor"/></svg>
+          </a>
+          <a href="#servicesSection" class="drawer-nav-item" data-section="services" style="--item-index: 3;">
+            <span class="item-number">03</span>
+            <div class="item-text-group">
+              <span class="item-label">Our Services</span>
+              <span class="item-desc">Plots, Villas &amp; Contracting</span>
+            </div>
+            <svg viewBox="0 0 24 24" class="item-arrow"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" fill="currentColor"/></svg>
+          </a>
+          <a href="#projectsSection" class="drawer-nav-item" data-section="projects" style="--item-index: 4;">
+            <span class="item-number">04</span>
+            <div class="item-text-group">
+              <span class="item-label">Our Projects</span>
+              <span class="item-desc">Portfolio &amp; Video Walkthroughs</span>
+            </div>
+            <svg viewBox="0 0 24 24" class="item-arrow"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" fill="currentColor"/></svg>
+          </a>
+          <a href="#whyUsSection" class="drawer-nav-item" data-section="why-us" style="--item-index: 5;">
+            <span class="item-number">05</span>
+            <div class="item-text-group">
+              <span class="item-label">Why Choose Us</span>
+              <span class="item-desc">Clear Titles &amp; Quality Assured</span>
+            </div>
+            <svg viewBox="0 0 24 24" class="item-arrow"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" fill="currentColor"/></svg>
+          </a>
+          <a href="#contactSection" class="drawer-nav-item" data-section="contact" style="--item-index: 6;">
+            <span class="item-number">06</span>
+            <div class="item-text-group">
+              <span class="item-label">Contact Us</span>
+              <span class="item-desc">Get in Touch with Our Team</span>
+            </div>
+            <svg viewBox="0 0 24 24" class="item-arrow"><path d="M8.59 16.59L13.17 12 8.59 7.41 10 6l6 6-6 6-1.41-1.41z" fill="currentColor"/></svg>
+          </a>
+        </nav>
+
+        <!-- Drawer Footer with Construction Agency Info -->
+        <div class="drawer-footer">
+          <div class="drawer-contact-card">
+            <span class="contact-card-label">DIRECT INQUIRY &amp; SITE VISITS</span>
+            <a href="tel:8125900999" class="drawer-phone-btn">
+              <svg viewBox="0 0 24 24" class="phone-icon"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
+              <span>8125 900 999</span>
+            </a>
+            <p class="drawer-address-text">
+              <svg viewBox="0 0 24 24" class="map-icon"><path d="M12 2C8.13 2 5 5.13 5 9c0 5.25 7 13 7 13s7-7.75 7-13c0-3.87-3.13-7-7-7zm0 9.5c-1.38 0-2.5-1.12-2.5-2.5s1.12-2.5 2.5-2.5 2.5 1.12 2.5 2.5-1.12 2.5-2.5 2.5z" fill="currentColor"/></svg>
+              Sri Sai Balaji Ventures &amp; Construction • AP &amp; Telangana
+            </p>
+          </div>
+        </div>
+
+      </div>
+    </aside>
 
     <!-- Main Content Shell -->
     <div class="page-shell">
@@ -89,8 +199,72 @@
         </section>
 
         <!-- Main Feed Content Shell -->
-        <div class="home-feed-shell" id="projectsSection">
-          <section class="video-feed-section">
+        <div class="home-feed-shell">
+
+          <!-- About Us Section -->
+          <section class="content-block-section" id="aboutSection">
+            <div class="block-section-header">
+              <span class="feed-section-badge">ABOUT US</span>
+              <h2 class="feed-heading">Building Legacies with Unmatched Quality</h2>
+              <p class="feed-subheading">Over 15 years of excellence in real estate ventures, open plot developments, and premium construction across Andhra Pradesh &amp; Telangana.</p>
+            </div>
+            <div class="about-grid">
+              <div class="about-card">
+                <div class="about-icon-box">
+                  <svg viewBox="0 0 24 24" class="about-svg"><path d="M12 3L2 12h3v8h6v-6h2v6h6v-8h3L12 3z" fill="currentColor"/></svg>
+                </div>
+                <h3 class="about-card-title">Architectural Mastery</h3>
+                <p class="about-card-desc">Every venture is engineered with contemporary architecture, precision layout design, and 100% Vastu compliance for sustainable living.</p>
+              </div>
+              <div class="about-card">
+                <div class="about-icon-box">
+                  <svg viewBox="0 0 24 24" class="about-svg"><path d="M9 16.17L4.83 12l-1.42 1.41L9 19 21 7l-1.41-1.41z" fill="currentColor"/></svg>
+                </div>
+                <h3 class="about-card-title">100% Clear Titles</h3>
+                <p class="about-card-desc">Uncompromising legal transparency, DTCP/RERA approved layouts, and immediate spot registration ensure peace of mind for every investor.</p>
+              </div>
+              <div class="about-card">
+                <div class="about-icon-box">
+                  <svg viewBox="0 0 24 24" class="about-svg"><path d="M16 11c1.66 0 2.99-1.34 2.99-3S17.66 5 16 5c-1.66 0-3 1.34-3 3s1.34 3 3 3zm-8 0c1.66 0 2.99-1.34 2.99-3S9.66 5 8 5C6.34 5 5 6.34 5 8s1.34 3 3 3zm0 2c-2.33 0-7 1.17-7 3.5V19h14v-2.5c0-2.33-4.67-3.5-7-3.5zm8 0c-.29 0-.62.02-.97.05 1.16.84 1.97 1.97 1.97 3.45V19h6v-2.5c0-2.33-4.67-3.5-7-3.5z" fill="currentColor"/></svg>
+                </div>
+                <h3 class="about-card-title">Client-First Integrity</h3>
+                <p class="about-card-desc">Dedicated relationship managers guide you through site visits, legal documentation, and property possession with complete honesty.</p>
+              </div>
+            </div>
+          </section>
+
+          <!-- Our Services Section -->
+          <section class="content-block-section" id="servicesSection">
+            <div class="block-section-header">
+              <span class="feed-section-badge">OUR SERVICES</span>
+              <h2 class="feed-heading">Comprehensive Venture &amp; Construction Solutions</h2>
+              <p class="feed-subheading">From prime plotted layouts to turnkey villa construction, we deliver world-class infrastructure tailored to your needs.</p>
+            </div>
+            <div class="services-grid">
+              <div class="service-card">
+                <div class="service-badge">01</div>
+                <h3 class="service-title">Open Plot Ventures</h3>
+                <p class="service-desc">Strategically located premium layout plots with 40ft blacktop roads, underground drainage, electricity, and avenue plantation.</p>
+              </div>
+              <div class="service-card">
+                <div class="service-badge">02</div>
+                <h3 class="service-title">Residential Villas &amp; Homes</h3>
+                <p class="service-desc">Custom architect-designed independent houses, duplex villas, and modern residential spaces crafted with superior materials.</p>
+              </div>
+              <div class="service-card">
+                <div class="service-badge">03</div>
+                <h3 class="service-title">Turnkey Contracting</h3>
+                <p class="service-desc">End-to-end civil construction services from foundation laying and structural framing to premium finishes and hand-over.</p>
+              </div>
+              <div class="service-card">
+                <div class="service-badge">04</div>
+                <h3 class="service-title">Commercial Developments</h3>
+                <p class="service-desc">High-visibility retail hubs, commercial complexes, and office spaces engineered for long-term durability and high ROI.</p>
+              </div>
+            </div>
+          </section>
+
+          <section class="video-feed-section" id="projectsSection">
             <div class="feed-section-header">
               <div class="feed-header-left">
                 <span class="feed-section-badge">PORTFOLIO</span>
@@ -377,12 +551,44 @@
 
           </div>
         </section>
+
+        <!-- Why Choose Us Section -->
+        <section class="content-block-section" id="whyUsSection">
+          <div class="block-section-header">
+            <span class="feed-section-badge">WHY CHOOSE US</span>
+            <h2 class="feed-heading">The Sri Sai Balaji Advantage</h2>
+            <p class="feed-subheading">Trust, legal transparency, and timely project delivery define every venture we undertake.</p>
+          </div>
+          <div class="why-us-grid">
+            <div class="why-card">
+              <div class="why-metric">15+</div>
+              <div class="why-title">Years of Trust</div>
+              <p class="why-text">A proven legacy of high-return ventures and thousands of delighted land and home owners.</p>
+            </div>
+            <div class="why-card">
+              <div class="why-metric">100%</div>
+              <div class="why-title">Vastu Compliant</div>
+              <p class="why-text">Layouts and structural elevations designed strictly adhering to traditional Vastu shastra tenets.</p>
+            </div>
+            <div class="why-card">
+              <div class="why-metric">Prime</div>
+              <div class="why-title">High-Growth Locations</div>
+              <p class="why-text">Fast-appreciating corridors near national highways, expressways, and commercial centers.</p>
+            </div>
+            <div class="why-card">
+              <div class="why-metric">24/7</div>
+              <div class="why-title">Client Support</div>
+              <p class="why-text">Dedicated assistance for site visits, bank loans, spot registration, and legal approvals.</p>
+            </div>
+          </div>
+        </section>
+
         <!-- Telugu CTA Banner Section -->
-        <section class="telugu-cta-section">
+        <section class="telugu-cta-section" id="contactSection">
           <div class="cta-banner-content">
             <h2 class="telugu-graceful-text">మీ కలలను సాకారం చేసుకోండి</h2>
             <!-- Contact button opens dial pad using tel: scheme -->
-            <a href="tel:+919876543210" class="cta-dial-btn">
+            <a href="tel:8125900999" class="cta-dial-btn">
               <svg viewBox="0 0 24 24" class="phone-icon"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
               Contact Us
             </a>
