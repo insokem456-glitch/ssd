@@ -9,7 +9,7 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=Tenali+Ramakrishna&family=Ramabhadra&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="style.css">
-
+  <script src="https://unpkg.com/@supabase/supabase-js@2"></script>
 </head>
 <body class="light-theme">
   <!-- App Root -->
@@ -158,13 +158,8 @@
         <section class="hero-screen" id="heroSection">
           <!-- Background Video -->
           <div class="hero-bg-video">
-            <iframe 
-              src="https://www.youtube.com/embed/zJrfClJY7BY?autoplay=1&mute=1&loop=1&playlist=zJrfClJY7BY&controls=0&showinfo=0&rel=0&modestbranding=1&playsinline=1" 
-              frameborder="0" 
-              allow="autoplay; encrypted-media" 
-              allowfullscreen>
-            </iframe>
-          </div>
+              <video id="heroBgVideo" autoplay muted loop playsinline style="width: 100%; height: 100%; object-fit: cover;"></video>
+            </div>
 
           <div class="hero-inner-content">
             <h1 class="hero-brand-title">
@@ -275,141 +270,7 @@
 
             <!-- Image Slider Grid -->
             <div class="image-slider-wrapper">
-              <div class="image-slider-container" id="imageSliderGrid">
-
-                <!-- Slide 1 -->
-                <article class="slider-card">
-                  <div class="slider-media-box">
-                    <img src="https://yt3.ggpht.com/YF0QErlcdMdH9w_ALRJoR_uRDoJFVvdmT8Orr_loMf4khQBb7B0-3KUDiNKWmJHsHrfzLgSdJhB2WQ=s1024" alt="Project Image" class="slider-img" referrerpolicy="no-referrer">
-                  </div>
-                  <div class="slider-actions">
-                    <a href="tel:8125900999" class="slider-contact-btn">
-                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
-                      Contact Us
-                    </a>
-                  </div>
-                </article>
-
-                <!-- Slide 2 -->
-                <article class="slider-card">
-                  <div class="slider-media-box">
-                    <img src="https://yt3.ggpht.com/kMFvBLxdQtaojBw7P03UFvjjvdBHYeGR8ZMuw7HBzUHo4YwH6M5Dj6bK-oeO8wCoSm-Xf4e7G0Rd=s1024" alt="Project Image 2" class="slider-img" referrerpolicy="no-referrer">
-                  </div>
-                  <div class="slider-actions">
-                    <a href="tel:8125900999" class="slider-contact-btn">
-                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
-                      Contact Us
-                    </a>
-                  </div>
-                </article>
-
-                <!-- Slide 3 -->
-                <article class="slider-card">
-                  <div class="slider-media-box">
-                    <img src="https://yt3.ggpht.com/VQsQ9RLsGUyROqVmtOst3b_MbeHIyHGJNEhGIq-TOSYFRqBOvRfLnEGCpa5_qJvMUBwZILdPdgPvSw=s1024" alt="Project Image 3" class="slider-img" referrerpolicy="no-referrer">
-                  </div>
-                  <div class="slider-actions">
-                    <a href="tel:8125900999" class="slider-contact-btn">
-                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
-                      Contact Us
-                    </a>
-                  </div>
-                </article>
-
-                <!-- Slide 4 -->
-                <article class="slider-card">
-                  <div class="slider-media-box">
-                    <img src="https://yt3.ggpht.com/MQV1rc6PV6AbuPFp9mVL-dGSQRu__EhmmEwZCF7heuin_lAoYbmQ_q3heBJ33GAVa8xhDSNudxJS1A=s1024" alt="Project Image 4" class="slider-img" referrerpolicy="no-referrer">
-                  </div>
-                  <div class="slider-actions">
-                    <a href="tel:8125900999" class="slider-contact-btn">
-                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
-                      Contact Us
-                    </a>
-                  </div>
-                </article>
-
-                <!-- Slide 5 -->
-                <article class="slider-card">
-                  <div class="slider-media-box">
-                    <img src="https://yt3.ggpht.com/u9tb_zsEa22LNNF8oWS4hQ0XdrT2VBonwwt_ZluzRCvPIoaHCkvPPBk3YBt6VjSdRRQ4V6J2XLumZqc=s1024" alt="Project Image 5" class="slider-img" referrerpolicy="no-referrer">
-                  </div>
-                  <div class="slider-actions">
-                    <a href="tel:8125900999" class="slider-contact-btn">
-                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
-                      Contact Us
-                    </a>
-                  </div>
-                </article>
-
-                <!-- Slide 6 -->
-                <article class="slider-card">
-                  <div class="slider-media-box">
-                    <img src="https://yt3.ggpht.com/9bln6okWEDrW8D7SgywnjpugoaLPhJKYGZcK54LGrMN5YBQxAMXtWBECcyk8gk-zPeZa48PM6pfyXBI=s1024" alt="Project Image 6" class="slider-img" referrerpolicy="no-referrer">
-                  </div>
-                  <div class="slider-actions">
-                    <a href="tel:8125900999" class="slider-contact-btn">
-                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
-                      Contact Us
-                    </a>
-                  </div>
-                </article>
-
-                <!-- Slide 7 -->
-                <article class="slider-card">
-                  <div class="slider-media-box">
-                    <img src="https://yt3.ggpht.com/-CzT0nOoioOtvTqMfFdA3wHaWnf2P-YKQfKYdMQwjOsJDI8XvMXxm4FRG_UFLR6WIrO6FkoESrB4wA=s1024" alt="Project Image 7" class="slider-img" referrerpolicy="no-referrer">
-                  </div>
-                  <div class="slider-actions">
-                    <a href="tel:8125900999" class="slider-contact-btn">
-                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
-                      Contact Us
-                    </a>
-                  </div>
-                </article>
-
-                <!-- Slide 8 -->
-                <article class="slider-card">
-                  <div class="slider-media-box">
-                    <img src="https://yt3.ggpht.com/5MmtNcGffg8h81kNAhG_D_gqE_iuGXoR0s5vW-BxmTBPsgp__0dKgWwud9hdRfy3jBjjkVhiJEv0Ymc=s1024" alt="Project Image 8" class="slider-img" referrerpolicy="no-referrer">
-                  </div>
-                  <div class="slider-actions">
-                    <a href="tel:8125900999" class="slider-contact-btn">
-                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
-                      Contact Us
-                    </a>
-                  </div>
-                </article>
-
-                <!-- Slide 9 -->
-                <article class="slider-card">
-                  <div class="slider-media-box">
-                    <img src="https://yt3.ggpht.com/TYmRXlAUMoUunixKOQG8nksao0N2fjd38zmg1M0xHK58N2kRmSei8meIg3h2eEKU8hjBpANdGIeTlw=s1024" alt="Project Image 9" class="slider-img" referrerpolicy="no-referrer">
-                  </div>
-                  <div class="slider-actions">
-                    <a href="tel:8125900999" class="slider-contact-btn">
-                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
-                      Contact Us
-                    </a>
-                  </div>
-                </article>
-
-                <!-- Slide 10 -->
-                <article class="slider-card">
-                  <div class="slider-media-box">
-                    <img src="https://yt3.ggpht.com/ks7FFEGugzySXrmLa6siMKZDszMzFBZiRdx4OQWXZftb3TZSRsD2JsZFGx-tN_mQhs4h-SAnBakm=s1024" alt="Project Image 10" class="slider-img" referrerpolicy="no-referrer">
-                  </div>
-                  <div class="slider-actions">
-                    <a href="tel:8125900999" class="slider-contact-btn">
-                      <svg viewBox="0 0 24 24" class="icon-sm"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
-                      Contact Us
-                    </a>
-                  </div>
-                </article>
-
-              </div>
-            </div>
-        </section>
+              <div class="image-slider-container" id="imageSliderGrid"></div></div></section>
 
         <!-- Projects Section -->
         <section class="named-projects-section" id="projectsVideoSection">
@@ -417,142 +278,10 @@
             <h2 class="section-title">Video Gallery</h2>
           </div>
           
-          <div class="projects-video-grid">
-            
-            <!-- Video 1 -->
-            <div class="project-video-card" id="projectVideo1">
-              <div class="video-thumbnail" id="thumb1" style="background-image: url('https://img.youtube.com/vi/fjkCi3CbQCg/hqdefault.jpg');"></div>
-              <div class="video-overlay" id="overlay1"></div>
-              
-              <button class="project-play-btn" id="playBtn1" aria-label="Play Video 1">
-                <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
-              </button>
-              
-              <button class="project-stop-btn hidden" id="stopBtn1" aria-label="Stop Video 1">
-                <svg viewBox="0 0 24 24" class="stop-icon"><path d="M6 6h12v12H6z" fill="currentColor"/></svg>
-                Stop
-              </button>
-              
-              <div class="iframe-clipper">
-                <iframe 
-                  id="iframe1"
-                  class="project-video-iframe"
-                  src="" 
-                  frameborder="0" 
-                  allow="autoplay; encrypted-media" 
-                  allowfullscreen>
-                </iframe>
-              </div>
-            </div>
+          <div class="projects-video-grid" id="projectsVideoGrid"></div>
+          </section>
 
-            <!-- Video 2 -->
-            <div class="project-video-card" id="projectVideo2">
-              <div class="video-thumbnail" id="thumb2" style="background-image: url('https://img.youtube.com/vi/cMsJo2xfBqs/hqdefault.jpg');"></div>
-              <div class="video-overlay" id="overlay2"></div>
-              
-              <button class="project-play-btn" id="playBtn2" aria-label="Play Video 2">
-                <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
-              </button>
-              
-              <button class="project-stop-btn hidden" id="stopBtn2" aria-label="Stop Video 2">
-                <svg viewBox="0 0 24 24" class="stop-icon"><path d="M6 6h12v12H6z" fill="currentColor"/></svg>
-                Stop
-              </button>
-              
-              <div class="iframe-clipper">
-                <iframe 
-                  id="iframe2"
-                  class="project-video-iframe"
-                  src="" 
-                  frameborder="0" 
-                  allow="autoplay; encrypted-media" 
-                  allowfullscreen>
-                </iframe>
-              </div>
-            </div>
-
-            <!-- Video 3 -->
-            <div class="project-video-card" id="projectVideo3">
-              <div class="video-thumbnail" id="thumb3" style="background-image: url('https://img.youtube.com/vi/jeJvs1U-GP8/hqdefault.jpg');"></div>
-              <div class="video-overlay" id="overlay3"></div>
-              
-              <button class="project-play-btn" id="playBtn3" aria-label="Play Video 3">
-                <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
-              </button>
-              
-              <button class="project-stop-btn hidden" id="stopBtn3" aria-label="Stop Video 3">
-                <svg viewBox="0 0 24 24" class="stop-icon"><path d="M6 6h12v12H6z" fill="currentColor"/></svg>
-                Stop
-              </button>
-              
-              <div class="iframe-clipper">
-                <iframe 
-                  id="iframe3"
-                  class="project-video-iframe"
-                  src="" 
-                  frameborder="0" 
-                  allow="autoplay; encrypted-media" 
-                  allowfullscreen>
-                </iframe>
-              </div>
-            </div>
-
-            <!-- Video 4 -->
-            <div class="project-video-card" id="projectVideo4">
-              <div class="video-thumbnail" id="thumb4" style="background-image: url('https://img.youtube.com/vi/Reqfg2yKj64/hqdefault.jpg');"></div>
-              <div class="video-overlay" id="overlay4"></div>
-              
-              <button class="project-play-btn" id="playBtn4" aria-label="Play Video 4">
-                <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
-              </button>
-              
-              <button class="project-stop-btn hidden" id="stopBtn4" aria-label="Stop Video 4">
-                <svg viewBox="0 0 24 24" class="stop-icon"><path d="M6 6h12v12H6z" fill="currentColor"/></svg>
-                Stop
-              </button>
-              
-              <div class="iframe-clipper">
-                <iframe 
-                  id="iframe4"
-                  class="project-video-iframe"
-                  src="" 
-                  frameborder="0" 
-                  allow="autoplay; encrypted-media" 
-                  allowfullscreen>
-                </iframe>
-              </div>
-            </div>
-
-            <!-- Video 5 -->
-            <div class="project-video-card" id="projectVideo5">
-              <div class="video-thumbnail" id="thumb5" style="background-image: url('https://img.youtube.com/vi/mkShyVmtehw/hqdefault.jpg');"></div>
-              <div class="video-overlay" id="overlay5"></div>
-              
-              <button class="project-play-btn" id="playBtn5" aria-label="Play Video 5">
-                <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
-              </button>
-              
-              <button class="project-stop-btn hidden" id="stopBtn5" aria-label="Stop Video 5">
-                <svg viewBox="0 0 24 24" class="stop-icon"><path d="M6 6h12v12H6z" fill="currentColor"/></svg>
-                Stop
-              </button>
-              
-              <div class="iframe-clipper">
-                <iframe 
-                  id="iframe5"
-                  class="project-video-iframe"
-                  src="" 
-                  frameborder="0" 
-                  allow="autoplay; encrypted-media" 
-                  allowfullscreen>
-                </iframe>
-              </div>
-            </div>
-
-          </div>
-        </section>
-
-        <!-- Why Choose Us Section -->
+          <!-- Why Choose Us Section -->
         <section class="content-block-section" id="whyUsSection">
           <div class="block-section-header">
             <span class="feed-section-badge">WHY CHOOSE US</span>
@@ -844,3 +573,4 @@
   <script src="app.js"></script>
 </body>
 </html>
+

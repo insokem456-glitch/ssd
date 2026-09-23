@@ -143,7 +143,8 @@ const birds = [
   { x: 0.65, y: 0.3, speed: 0.018 }
 ];
 
-document.addEventListener("DOMContentLoaded", () => {
+document.addEventListener("DOMContentLoaded", () => { 
+  try { initSupabase(); } catch(e) { console.error("Supabase Error:", e); }
   initTheme();
   renderFeedThumbnails();
   initCardClickEvents();
@@ -153,7 +154,7 @@ document.addEventListener("DOMContentLoaded", () => {
   initNavigation();
   initLightbox();
   initImageRetries();
-  initNamedProjectsVideo();
+  initSupabase();
 });
 
 /* ==========================================================================
@@ -1143,59 +1144,153 @@ function initImageRetries() {
 }
 
 /* ==========================================================================
-   PROJECTS VIDEO LOGIC
+   SUPABASE INTEGRATION
    ========================================================================== */
-function initNamedProjectsVideo() {
-  setupProjectVideo(
-    "playBtn1", "stopBtn1", "iframe1", "thumb1", "overlay1", "fjkCi3CbQCg"
-  );
-  
-  setupProjectVideo(
-    "playBtn2", "stopBtn2", "iframe2", "thumb2", "overlay2", "cMsJo2xfBqs"
-  );
+const SUPABASE_URL = 'https://blsygxgnwlvdgxochvpj.supabase.co';
+const SUPABASE_ANON_KEY = 'eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6ImJsc3lneGdud2x2ZGd4b2NodnBqIiwicm9sZSI6ImFub24iLCJpYXQiOjE3ODk3OTg2MTMsImV4cCI6MjEwNTM3NDYxM30.fcEUCtn3BNIMlZPIxxbWsxGMvhOyqFXstmB75YsOVeI';
+let supabaseClient;
 
-  setupProjectVideo(
-    "playBtn3", "stopBtn3", "iframe3", "thumb3", "overlay3", "jeJvs1U-GP8"
-  );
 
-  setupProjectVideo(
-    "playBtn4", "stopBtn4", "iframe4", "thumb4", "overlay4", "Reqfg2yKj64"
-  );
 
-  setupProjectVideo(
-    "playBtn5", "stopBtn5", "iframe5", "thumb5", "overlay5", "mkShyVmtehw"
-  );
+
+function initSupabase() { 
+  if (typeof window.supabase !== 'undefined') {
+    supabaseClient = window.supabase.createClient(SUPABASE_URL, SUPABASE_ANON_KEY);
+    loadPostImages();
+    loadVideos();
+  } else {
+    console.error('Supabase library not loaded.'); 
+  }
 }
 
-function setupProjectVideo(playBtnId, stopBtnId, iframeId, thumbId, overlayId, videoId) {
-  const playBtn = document.getElementById(playBtnId);
-  const stopBtn = document.getElementById(stopBtnId);
-  const iframe = document.getElementById(iframeId);
-  const thumb = document.getElementById(thumbId);
-  const overlay = document.getElementById(overlayId);
+async function loadPostImages() {
+  const container = document.getElementById('imageSliderGrid');
+  if (!container) return;
 
-  if (!playBtn || !iframe || !overlay || !stopBtn || !thumb) return;
+  const { data, error } = await supabaseClient.storage.from('post ssb').list();
+  if (error) {
+    console.error('Error fetching images:', error); 
+    return;
+  }
 
-  playBtn.addEventListener("click", () => {
-    // Hide play button, hide thumbnail, show stop button
-    playBtn.classList.add("hidden");
-    thumb.classList.add("hidden");
-    stopBtn.classList.remove("hidden");
-    overlay.classList.add("playing");
+  const files = data.filter(file => file.name && file.name !== '.emptyFolderPlaceholder' && !file.name.startsWith('.'));
 
-    // Set src with autoplay, audio on (mute=0), and all UI hidden
-    iframe.src = `https://www.youtube.com/embed/${videoId}?autoplay=1&mute=0&controls=0&rel=0&modestbranding=1`;
-  });
+  if (files.length === 0) {
+    container.innerHTML = '<p style="padding:2rem;">No images found.</p>';
+    return;
+  }
 
-  stopBtn.addEventListener("click", () => {
-    // Stop playback by clearing the iframe source
-    iframe.src = "";
+  files.forEach(file => {
+    const { data: publicUrlData } = supabaseClient.storage.from('post ssb').getPublicUrl(file.name);
+    const publicUrl = publicUrlData.publicUrl;
+
+    const article = document.createElement('article');
+    article.className = 'slider-card';
     
-    // Reset UI to initial state
-    playBtn.classList.remove("hidden");
-    thumb.classList.remove("hidden");
-    stopBtn.classList.add("hidden");
-    overlay.classList.remove("playing");
+    article.innerHTML = `
+      <div class="slider-media-box">
+        <img src="${publicUrl}" alt="${file.name}" class="slider-img" referrerpolicy="no-referrer">
+      </div>
+      <div class="slider-actions">
+        <a href="tel:8125900999" class="slider-contact-btn">
+          <svg viewBox="0 0 24 24" class="icon-sm"><path d="M6.62 10.79c1.44 2.83 3.76 5.14 6.59 6.59l2.2-2.2c.27-.27.67-.36 1.02-.24 1.12.37 2.33.57 3.57.57.55 0 1 .45 1 1V20c0 .55-.45 1-1 1-9.39 0-17-7.61-17-17 0-.55.45-1 1-1h3.5c.55 0 1 .45 1 1 0 1.25.2 2.45.57 3.57.11.35.03.74-.25 1.02l-2.2 2.2z" fill="currentColor"/></svg>
+          Contact Us
+        </a>
+      </div>
+`;
+    container.appendChild(article); 
   });
+  
+  setTimeout(() => {
+    initLightbox();
+    initImageRetries();
+  }, 100);
 }
 
+async function loadVideos() {
+  const container = document.getElementById('projectsVideoGrid');
+  if (!container) return;
+
+  const { data, error } = await supabaseClient.storage.from('videos ssb').list();
+  if (error) {
+    console.error('Error fetching videos:', error); 
+    return;
+  }
+
+  const files = data.filter(file => file.name && file.name !== '.emptyFolderPlaceholder' && !file.name.startsWith('.'));
+
+  if (files.length === 0) {
+    container.innerHTML = '<p style="padding:2rem;">No videos found.</p>';
+    return;
+  }
+  const heroVideo = document.getElementById('heroBgVideo');
+  if (heroVideo && files.length > 0) {
+    const { data: publicUrlDataHero } = supabaseClient.storage.from('videos ssb').getPublicUrl(files[0].name);
+    heroVideo.src = publicUrlDataHero.publicUrl;
+    heroVideo.play().catch(e => console.error('Autoplay prevented:', e));
+  }
+
+
+  files.forEach((file, index) => {
+    const { data: publicUrlData } = supabaseClient.storage.from('videos ssb').getPublicUrl(file.name);
+    const publicUrl = publicUrlData.publicUrl;
+    
+    const card = document.createElement('div');
+    card.className = 'project-video-card';
+    card.id = `projectVideo${index}`;
+
+    card.innerHTML = `
+      <video 
+        id="videoElem${index}"
+        class="project-video-iframe" 
+        src="${publicUrl}" 
+        preload="metadata"
+        style="width: 100%; height: 100%; object-fit: cover; position: absolute; top: 0; left: 0;"
+        playsinline
+      ></video>
+      <div class="video-overlay" id="overlay${index}"></div>
+      
+      <button class="project-play-btn" id="playBtn${index}" aria-label="Play Video">
+        <svg viewBox="0 0 24 24" class="play-icon"><path d="M8 5v14l11-7z" fill="currentColor"/></svg>
+      </button>
+      
+      <button class="project-stop-btn hidden" id="stopBtn${index}" aria-label="Stop Video">
+        <svg viewBox="0 0 24 24" class="stop-icon"><path d="M6 6h12v12H6z" fill="currentColor"/></svg>
+        Stop
+      </button>
+`;
+    
+    container.appendChild(card); 
+    
+    const playBtn = card.querySelector(`#playBtn${index}`);
+    const stopBtn = card.querySelector(`#stopBtn${index}`);
+    const video = card.querySelector(`#videoElem${index}`);
+    const overlay = card.querySelector(`#overlay${index}`);
+    
+    playBtn.addEventListener('click', () => {
+      playBtn.classList.add('hidden');
+      stopBtn.classList.remove('hidden');
+      overlay.classList.add('playing');
+      
+      video.setAttribute('controls', 'true');
+      video.play();
+    });
+    
+    stopBtn.addEventListener('click', () => {
+      video.pause();
+      video.currentTime = 0;
+      video.removeAttribute('controls');
+      
+      playBtn.classList.remove('hidden');
+      stopBtn.classList.add('hidden');
+      overlay.classList.remove('playing');
+    });
+    
+    video.addEventListener('ended', () => {
+      video.removeAttribute('controls');
+      playBtn.classList.remove('hidden');
+      stopBtn.classList.add('hidden');
+      overlay.classList.remove('playing');
+    });
+  });
+}
